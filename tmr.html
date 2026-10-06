@@ -1,0 +1,419 @@
+<title>당진낙농축협 TMR 운송기록 개인정보처리방침</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;700&family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #faf7f0;
+    --surface: #ffffff;
+    --surface-2: #f4efe3;
+    --ink: #2e2b22;
+    --ink-soft: #6b6656;
+    --accent: #2f6d4f;
+    --accent-ink: #1f4d38;
+    --accent-soft: #e7efe7;
+    --gold: #a8791f;
+    --line: #e4dfd1;
+    --fill-bg: #fdf1d8;
+    --fill-border: #cf9a2e;
+    --fill-ink: #6b4c14;
+    --shadow: 0 1px 2px rgba(46,43,34,0.06), 0 8px 24px rgba(46,43,34,0.06);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #12161a;
+      --surface: #1a1f25;
+      --surface-2: #202730;
+      --ink: #eae5d8;
+      --ink-soft: #9aa0a2;
+      --accent: #5aa87f;
+      --accent-ink: #8bcaa8;
+      --accent-soft: rgba(90,168,127,0.14);
+      --gold: #d8ad55;
+      --line: #2b323a;
+      --fill-bg: #332a17;
+      --fill-border: #8a6a2a;
+      --fill-ink: #e3c17c;
+      --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 8px 24px rgba(0,0,0,0.35);
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #12161a;
+    --surface: #1a1f25;
+    --surface-2: #202730;
+    --ink: #eae5d8;
+    --ink-soft: #9aa0a2;
+    --accent: #5aa87f;
+    --accent-ink: #8bcaa8;
+    --accent-soft: rgba(90,168,127,0.14);
+    --gold: #d8ad55;
+    --line: #2b323a;
+    --fill-bg: #332a17;
+    --fill-border: #8a6a2a;
+    --fill-ink: #e3c17c;
+    --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 8px 24px rgba(0,0,0,0.35);
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Noto Sans KR', -apple-system, 'Malgun Gothic', sans-serif;
+    line-height: 1.75;
+    font-size: 15.5px;
+  }
+  h1, h2, .serif {
+    font-family: 'Noto Serif KR', 'Batang', serif;
+    text-wrap: balance;
+  }
+
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 40px 24px 96px; }
+
+  /* Masthead */
+  .masthead {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 28px 32px;
+    box-shadow: var(--shadow);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .mark {
+    width: 52px; height: 52px; border-radius: 14px;
+    background: linear-gradient(155deg, var(--accent), var(--accent-ink));
+    flex: none;
+    display: flex; align-items: center; justify-content: center;
+    color: #f4f1e6;
+    font-family: 'Noto Serif KR', serif;
+    font-size: 22px;
+    font-weight: 700;
+  }
+  .masthead-text { flex: 1; min-width: 220px; }
+  .eyebrow {
+    font-size: 12px; letter-spacing: 0.08em; color: var(--accent-ink);
+    font-weight: 700; text-transform: uppercase;
+  }
+  .masthead h1 { font-size: 24px; margin: 4px 0 0; font-weight: 700; }
+  .meta-row {
+    display: flex; gap: 20px; flex-wrap: wrap;
+    font-size: 13px; color: var(--ink-soft);
+    font-variant-numeric: tabular-nums;
+  }
+  .meta-row b { color: var(--ink); font-weight: 600; }
+
+  /* Layout: nav + content */
+  .layout { display: grid; grid-template-columns: 220px 1fr; gap: 40px; margin-top: 32px; align-items: start; }
+  @media (max-width: 780px) { .layout { grid-template-columns: 1fr; } }
+
+  nav.toc {
+    position: sticky; top: 24px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 18px;
+    font-size: 13.5px;
+    max-height: calc(100vh - 48px);
+    overflow-y: auto;
+  }
+  @media (max-width: 780px) {
+    nav.toc { position: static; max-height: none; display: flex; gap: 8px; overflow-x: auto; padding: 10px; }
+    nav.toc a { white-space: nowrap; }
+  }
+  nav.toc .toc-title { font-size: 11px; letter-spacing: 0.08em; color: var(--ink-soft); text-transform: uppercase; margin-bottom: 10px; font-weight: 700; }
+  @media (max-width: 780px) { nav.toc .toc-title { display: none; } }
+  nav.toc a {
+    display: block; padding: 6px 8px; margin: 1px 0; border-radius: 7px;
+    color: var(--ink-soft); text-decoration: none;
+  }
+  nav.toc a:hover, nav.toc a:focus-visible { background: var(--accent-soft); color: var(--accent-ink); }
+
+  main { min-width: 0; }
+
+  section.article {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 28px 32px;
+    margin-bottom: 16px;
+    scroll-margin-top: 20px;
+  }
+  .article-num {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 28px; height: 28px; border-radius: 50%;
+    background: var(--accent-soft); color: var(--accent-ink);
+    font-family: 'Noto Serif KR', serif; font-weight: 700; font-size: 13px;
+    margin-right: 10px; flex: none;
+  }
+  h2 {
+    font-size: 18px; font-weight: 700; margin: 0 0 14px;
+    display: flex; align-items: center;
+  }
+  section.article p { margin: 0 0 10px; color: var(--ink); }
+  section.article p.soft { color: var(--ink-soft); font-size: 14px; }
+  section.article ul, section.article ol { margin: 8px 0 10px; padding-left: 20px; }
+  section.article li { margin-bottom: 6px; }
+
+  table.data-table {
+    width: 100%; border-collapse: collapse; margin: 12px 0 16px; font-size: 14px;
+  }
+  table.data-table th, table.data-table td {
+    text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line);
+    vertical-align: top;
+  }
+  table.data-table th { color: var(--ink-soft); font-weight: 600; width: 30%; }
+
+  .fill {
+    background: var(--fill-bg);
+    border: 1px dashed var(--fill-border);
+    color: var(--fill-ink);
+    padding: 1px 8px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.95em;
+  }
+
+  .callout {
+    background: var(--surface-2);
+    border-left: 3px solid var(--gold);
+    border-radius: 0 10px 10px 0;
+    padding: 16px 20px;
+    margin-bottom: 24px;
+    font-size: 14px;
+    color: var(--ink);
+  }
+  .callout b { color: var(--fill-ink); }
+
+  footer {
+    margin-top: 32px; padding-top: 20px; border-top: 1px solid var(--line);
+    color: var(--ink-soft); font-size: 13px; text-align: center;
+  }
+
+  a.inline { color: var(--accent-ink); }
+</style>
+
+<div class="wrap">
+
+  <div class="masthead">
+    <div class="mark">낙</div>
+    <div class="masthead-text">
+      <div class="eyebrow">Privacy Policy</div>
+      <h1>당진낙농축협 TMR 운송기록 개인정보처리방침</h1>
+    </div>
+    <div class="meta-row">
+      <div>버전 <b>1.0</b></div>
+      <div>시행일자 <b>2026년 10월 6일</b></div>
+      <div>적용 서비스 <b>TMR 운송기록 앱 (kr.co.naturefarm.tmr)</b></div>
+    </div>
+  </div>
+
+  <div class="layout">
+    <nav class="toc" aria-label="목차">
+      <div class="toc-title">목차</div>
+      <a href="#preamble">전문</a>
+      <a href="#a1">제1조 처리 목적</a>
+      <a href="#a2">제2조 수집 항목</a>
+      <a href="#a3">제3조 보유·이용 기간</a>
+      <a href="#a4">제4조 제3자 제공</a>
+      <a href="#a5">제5조 처리 위탁·국외 이전</a>
+      <a href="#a6">제6조 정보주체의 권리</a>
+      <a href="#delete">제7조 계정 삭제 요청</a>
+      <a href="#a8">제8조 파기 절차</a>
+      <a href="#a9">제9조 안전성 확보조치</a>
+      <a href="#a10">제10조 보호책임자</a>
+      <a href="#a11">제11조 권익침해 구제</a>
+      <a href="#a12">제12조 방침 변경</a>
+    </nav>
+
+    <main>
+      <section class="article" id="preamble">
+        <p>
+          당진낙농축협(이하 "조합")이 운영하는 TMR 운송기록 앱(이하 "서비스")은
+          「개인정보보호법」 등 관련 법령을 준수하며, 서비스를 이용하는 TMR(완전혼합사료)
+          운반차 기사의 개인정보를 안전하게 처리하기 위하여 다음과 같이 개인정보처리방침을
+          수립·공개합니다.
+        </p>
+        <p class="soft">
+          본 서비스는 조합 목장에 사료를 운반하는 기사의 운송기록 업무용으로 제공되며,
+          최초 이용 시 성명과 휴대전화번호로 사용신청을 하고 관리자 승인을 받은 이후부터
+          이용할 수 있습니다.
+        </p>
+      </section>
+
+      <section class="article" id="a1">
+        <h2><span class="article-num">1</span>처리 목적</h2>
+        <p>조합은 다음의 목적을 위하여 개인정보를 처리합니다. 처리한 개인정보는
+          다음의 목적 이외의 용도로는 사용되지 않으며, 이용 목적이 변경되는 경우에는
+          별도의 동의를 받는 등 필요한 조치를 이행할 예정입니다.</p>
+        <ul>
+          <li><b>이용자 식별 및 사용신청 승인</b> — 휴대전화번호로 기사 본인을 확인하고,
+            관리자가 사용을 승인·관리</li>
+          <li><b>운송기록 작성·관리</b> — 목장·우사별 사료 운송량, 운송 시각, 운송한 기사를
+            기록하고 조회·삭제</li>
+          <li><b>매출전표 보관</b> — 운송 시 촬영하거나 선택한 매출전표 사진을 거래 증빙으로 보관</li>
+          <li><b>운송량 자동 입력</b> — 매출전표 사진이나 말한 내용에서 운송량(kg)과 거래 일시를 읽어
+            입력란을 채움</li>
+          <li><b>서비스 운영 및 부정이용 방지</b> — 문의 응대, 이상 이용 확인</li>
+        </ul>
+      </section>
+
+      <section class="article" id="a2">
+        <h2><span class="article-num">2</span>수집하는 개인정보 항목</h2>
+        <p>조합은 사용신청 및 서비스 이용 과정에서 아래 항목을 처리합니다.</p>
+        <table class="data-table">
+          <tr><th>구분</th><td>항목</td></tr>
+          <tr><th>사용신청 시 (필수)</th><td>성명, 휴대전화번호</td></tr>
+          <tr><th>운송기록 저장 시 (필수)</th>
+            <td>운송 일자·시각, 운송량, 목장·우사·우방, 기록한 기사 성명</td></tr>
+          <tr><th>매출전표 사진 (선택)</th>
+            <td>기사가 촬영하거나 선택한 매출전표 사진. 사진을 쓰지 않고 직접 입력할 수도 있습니다.</td></tr>
+          <tr><th>음성 입력 (선택)</th>
+            <td>운송량을 말로 입력할 때 기기의 음성 인식 기능이 문자로 바꾼 내용.
+              음성 녹음 파일은 조합 서버로 전송·저장하지 않습니다.</td></tr>
+          <tr><th>위치 정보 (선택)</th>
+            <td>여러 목장 중 가까운 목장을 미리 고르기 위해 기기 안에서만 사용하며,
+              조합 서버로 전송·저장하지 않습니다.</td></tr>
+        </table>
+        <p class="soft">계정 비밀번호, 결제 정보, 주민등록번호는 수집하지 않습니다.
+          카메라·마이크·위치 권한은 해당 기능을 쓸 때만 요청하며, 허용하지 않아도 운송량을
+          직접 입력해 이용할 수 있습니다.</p>
+      </section>
+
+      <section class="article" id="a3">
+        <h2><span class="article-num">3</span>개인정보의 처리 및 보유 기간</h2>
+        <p>
+          조합은 법령에 따른 개인정보 보유·이용 기간 또는 정보주체로부터 개인정보를
+          수집 시에 동의받은 개인정보 보유·이용 기간 내에서 개인정보를 처리·보유합니다.
+        </p>
+        <ul>
+          <li>사용신청 및 이용자 식별 정보(성명, 휴대전화번호): 서비스 이용 기간.
+            계정 삭제를 요청하면 요청일로부터 7일 이내에 삭제합니다.</li>
+          <li>운송기록과 매출전표 사진: 조합의 사료 거래 업무 기록이므로 계정을 삭제한 뒤에도
+            조합 내규에 따른 거래 기록 보존 기간 동안 보관하고, 기간이 지나면 파기합니다.</li>
+        </ul>
+      </section>
+
+      <section class="article" id="a4">
+        <h2><span class="article-num">4</span>개인정보의 제3자 제공</h2>
+        <p>
+          조합은 정보주체의 개인정보를 제1조(처리 목적)에서 명시한 범위 내에서만
+          처리하며, 정보주체의 동의, 법률의 특별한 규정 등 「개인정보보호법」
+          제17조 및 제18조에 해당하는 경우를 제외하고는 원칙적으로 개인정보를
+          제3자에게 제공하지 않습니다.
+        </p>
+      </section>
+
+      <section class="article" id="a5">
+        <h2><span class="article-num">5</span>개인정보 처리업무의 위탁 및 국외 이전</h2>
+        <p>조합은 운송량 자동 입력을 위하여 아래와 같이 개인정보 처리업무를 위탁하고 있으며,
+          이 과정에서 개인정보가 국외로 이전됩니다.</p>
+        <table class="data-table">
+          <tr><th>수탁업체</th><td>Anthropic, PBC (Claude API)</td></tr>
+          <tr><th>이전되는 국가</th><td>미국</td></tr>
+          <tr><th>위탁업무</th><td>매출전표 사진과 음성 입력 문자에서 운송량·거래 일시 읽기</td></tr>
+          <tr><th>이전 항목</th><td>매출전표 사진, 음성 입력을 문자로 바꾼 내용</td></tr>
+          <tr><th>이전 일시 및 방법</th><td>기사가 전표 사진을 올리거나 말로 입력할 때마다,
+            조합 서버를 거쳐 암호화된 통신(HTTPS)으로 전송</td></tr>
+          <tr><th>보유·이용 기간</th><td>처리 후 수탁업체의 데이터 보존 정책에 따른 기간.
+            수탁업체는 전송받은 내용을 인공지능 학습에 사용하지 않습니다.</td></tr>
+        </table>
+        <p class="soft">
+          국외 이전을 원하지 않으면 전표 사진이나 음성을 쓰지 않고 운송량을 직접 입력할 수 있습니다.
+          음성 입력의 문자 변환은 기기 운영체제의 음성 인식 기능(Android는 Google, iOS는 Apple)이 처리합니다.
+        </p>
+      </section>
+
+      <section class="article" id="a6">
+        <h2><span class="article-num">6</span>정보주체의 권리·의무 및 행사방법</h2>
+        <p>정보주체는 조합에 대해 언제든지 아래와 같은 개인정보 보호 관련 권리를
+          행사할 수 있습니다.</p>
+        <ul>
+          <li>개인정보 열람 요구</li>
+          <li>오류 등이 있을 경우 정정 요구</li>
+          <li>삭제(탈퇴) 요구 — 아래 <a class="inline" href="#delete">제7조</a>의 방법으로 요청</li>
+          <li>처리 정지 요구</li>
+        </ul>
+        <p>권리 행사는 아래 <a class="inline" href="#a10">제10조 개인정보 보호책임자</a>
+          연락처로 서면, 전화, 이메일 등을 통하여 하실 수 있으며 조합은 이에 대해 지체 없이
+          조치하겠습니다.</p>
+      </section>
+
+      <section class="article" id="delete">
+        <h2><span class="article-num">7</span>계정 삭제 요청</h2>
+        <p>TMR 운송기록 앱(개발자: 당진낙농축협) 계정은 아래 두 가지 방법 중 하나로 삭제를
+          요청할 수 있습니다.</p>
+        <ol>
+          <li><b>앱에서 요청</b> — 앱 위쪽의 「OOO 기사님」 이름을 누름 → 「내 정보」 →
+            「계정 삭제 요청」 → 「삭제 요청」. 요청하면 그 번호로는 바로 앱을 쓸 수 없게 됩니다.</li>
+          <li><b>앱을 쓸 수 없을 때</b> — 성명과 가입한 휴대전화번호를 적어
+            이메일(djnhmilk@daum.net) 또는 전화(041-350-8600)로 요청합니다.</li>
+        </ol>
+        <table class="data-table">
+          <tr><th>처리 기한</th><td>요청일로부터 7일 이내</td></tr>
+          <tr><th>삭제되는 정보</th><td>성명, 휴대전화번호, 사용신청·승인 정보</td></tr>
+          <tr><th>보관되는 정보</th><td>이미 저장된 운송기록(일자·시각·운송량·목장·우사, 기록한 기사 성명)과
+            매출전표 사진 — 조합의 사료 거래 업무 기록으로 제3조의 보존 기간 동안 보관 후 파기</td></tr>
+        </table>
+      </section>
+
+      <section class="article" id="a8">
+        <h2><span class="article-num">8</span>처리하는 개인정보의 파기</h2>
+        <p>
+          조합은 개인정보 보유 기간의 경과, 처리 목적 달성 등 개인정보가 불필요하게
+          되었을 때에는 지체 없이 해당 개인정보를 파기합니다. 전자적 파일 형태로
+          기록·저장된 개인정보(매출전표 사진 파일 포함)는 기록을 재생할 수 없도록 안전하게 삭제합니다.
+        </p>
+      </section>
+
+      <section class="article" id="a9">
+        <h2><span class="article-num">9</span>개인정보의 안전성 확보조치</h2>
+        <p>조합은 개인정보의 안전성 확보를 위해 다음과 같은 조치를 취하고 있습니다.</p>
+        <ul>
+          <li>개인정보에 대한 접근 권한을 관리자로 제한하고 접근 통제</li>
+          <li>통신 구간 암호화(HTTPS) 적용</li>
+          <li>매출전표 사진은 외부에서 열람할 수 없는 조합 서버 폴더에 보관</li>
+          <li>개인정보 취급 담당자의 최소화 및 교육</li>
+        </ul>
+      </section>
+
+      <section class="article" id="a10">
+        <h2><span class="article-num">10</span>개인정보 보호책임자</h2>
+        <p>조합은 개인정보 처리에 관한 업무를 총괄해서 책임지고, 개인정보 처리와
+          관련한 정보주체의 불만처리 및 피해구제 등을 위하여 아래와 같이 개인정보
+          보호책임자를 지정하고 있습니다.</p>
+        <table class="data-table">
+          <tr><th>성명</th><td>손재익</td></tr>
+          <tr><th>직책</th><td>팀장</td></tr>
+          <tr><th>연락처</th><td>041-350-8600</td></tr>
+          <tr><th>이메일</th><td>djnhmilk@daum.net</td></tr>
+        </table>
+      </section>
+
+      <section class="article" id="a11">
+        <h2><span class="article-num">11</span>권익침해 구제방법</h2>
+        <p>정보주체는 개인정보침해로 인한 구제를 받기 위하여 아래 기관에 분쟁해결이나
+          상담 등을 신청할 수 있습니다.</p>
+        <ul>
+          <li>개인정보분쟁조정위원회 : (국번없이) 1833-6972 (privacy.kollo.or.kr)</li>
+          <li>개인정보침해신고센터 : (국번없이) 118 (privacy.kisa.or.kr)</li>
+          <li>대검찰청 : (국번없이) 1301 (spo.go.kr)</li>
+          <li>경찰청 : (국번없이) 182 (ecrm.police.go.kr)</li>
+        </ul>
+      </section>
+
+      <section class="article" id="a12">
+        <h2><span class="article-num">12</span>개인정보처리방침의 변경</h2>
+        <p>이 개인정보처리방침은 2026. 10. 6.부터 적용되며,
+          법령 및 방침에 따른 변경 내용의 추가, 삭제 및 정정이 있는 경우에는
+          시행 최소 7일 전부터 이 페이지를 통하여 고지할 것입니다.</p>
+      </section>
+
+      <footer>
+        <p>당진낙농축협 / 충남 당진시 원당로 183 / 이경용 / 311-82-02563</p>
+        <p><a class="inline" href="./">업무캘린더 개인정보처리방침</a></p>
+      </footer>
+    </main>
+  </div>
+</div>
